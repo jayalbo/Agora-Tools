@@ -6,7 +6,7 @@ namespace AgoraIO.Media
     {
         public static int getTimestamp()
         {
-            TimeSpan t = DateTime.Now - new DateTime(1970, 1, 1);
+            TimeSpan t = DateTime.UtcNow - new DateTime(1970, 1, 1,0,0,0, DateTimeKind.Utc);
             return (int)t.TotalSeconds;
         }
 
